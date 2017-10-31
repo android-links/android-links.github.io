@@ -305,11 +305,11 @@
 				<div class="mdui-col">
 					<div class="mdui-textfield mdui-textfield-floating-label follow-us-email">
 						<label class="mdui-textfield-label mdui-text-color-white-secondary">邮箱地址</label>
-						<input class="mdui-textfield-input mdui-text-color-white-secondary" type="email" required/>
-  						<div class="mdui-textfield-error">邮箱格式错误</div>
+						<input id="email" class="mdui-textfield-input mdui-text-color-white-secondary" type="email" required/>
+  						<div id="message" class="mdui-textfield-error">邮箱格式错误</div>
 					</div>
 					<div class="mdui-text-center">
-						<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block btn-email-subscibe" mdui-tooltip="{content: '邮件订阅正在开发...', position: 'top'}" >邮件订阅</button>
+						<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block btn-email-subscibe" type="button" >邮件订阅</button>
 					</div>
 				</div>
 				<div class="mdui-col">
@@ -344,7 +344,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
+
+
 	</div>
 	<footer class="mdui-color-white">
 		<div class="mdui-container footer-container">
