@@ -2,7 +2,7 @@
 * @Author: inferjay
 * @Date:   2017-10-28 21:16:26
 * @Last Modified by:   inferjay
-* @Last Modified time: 2017-10-31 23:35:54
+* @Last Modified time: 2017-11-02 00:00:43
 */
 var $$ = mdui.JQ;
 
@@ -83,3 +83,22 @@ var attemptSubscibe = function(e) {
 };
 
 $('.btn-email-subscibe').click(attemptSubscibe);
+
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        $('.btn-back-to-top').show();
+    } else {
+        $('.btn-back-to-top').hide();
+    }
+}
+
+var backToTop = function () {
+   var scroll = new SmoothScroll();
+   scroll.animateScroll($('.back-to-top').get(0));
+};
+$('.btn-back-to-top').click(backToTop);
+

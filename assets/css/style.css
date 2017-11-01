@@ -2,7 +2,7 @@
 * @Author: inferjay
 * @Date:   2017-10-25 18:13:25
 * @Last Modified by:   inferjay
-* @Last Modified time: 2017-10-30 21:38:36
+* @Last Modified time: 2017-11-01 23:52:55
 */
 
 .padding-top-130 {
@@ -408,6 +408,10 @@ footer {
 
 .logs-desc-container {
 	margin-top: 60px;
+}
+
+.btn-back-to-top {
+	display: none;
 }
 /**/
 /*——————————————
