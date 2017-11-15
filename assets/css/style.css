@@ -2,7 +2,7 @@
 * @Author: inferjay
 * @Date:   2017-10-25 18:13:25
 * @Last Modified by:   inferjay
-* @Last Modified time: 2017-11-01 23:52:55
+* @Last Modified time: 2017-11-15 23:47:51
 */
 
 .padding-top-130 {
@@ -15,7 +15,7 @@
 }
 
 .home-container img {
-	height: 40%;
+	height: 35%;
 }
 
 .home-container h2 {
@@ -23,7 +23,7 @@
 }
 
 .home-container p {
-	line-height: 30px;
+	line-height: 24px;
 }
 
 .home-container p a {
