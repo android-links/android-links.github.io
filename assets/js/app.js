@@ -2,7 +2,7 @@
 * @Author: inferjay
 * @Date:   2017-10-28 21:16:26
 * @Last Modified by:   inferjay
-* @Last Modified time: 2017-11-02 00:00:43
+* @Last Modified time: 2017-11-16 12:58:54
 */
 var $$ = mdui.JQ;
 
@@ -16,30 +16,30 @@ $$(function () {
 
 var scroll = new SmoothScroll('[data-easing="linear"]', {easing: 'linear'});
 
-var wechatQrcode = $('.follow-us-wechat-official-qrcode');
+var wechat_qrcode = $('.follow-us-wechat-official-qrcode');
 $('.follow-us-social-item.wechat').hover(function() {
-		wechatQrcode.show();
+		wechat_qrcode.show();
 }, function() {
-		wechatQrcode.hide();
+		wechat_qrcode.hide();
 });
 
-function IsEmail(email) {
+function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
 
 // 邮件订阅功能
-var mailchimp_url = "https://androidlinks.us17.list-manage.com/subscribe/?u=21b7c731d4d2719058edaf040&id=6b25b5980e";
+var mailchimp_url   = "https://androidlinks.us17.list-manage.com/subscribe/?u=21b7c731d4d2719058edaf040&id=6b25b5980e";
 var success_message = "请检查您收件箱并确认邮件";
-var msgParams = {'timeout': 2000, 'position': 'top'};
+var msg_params      = {'timeout': 2000, 'position': 'top'};
 
-var attemptSubscibe = function(e) {
+var attempt_subscibe = function(e) {
     e.preventDefault();
     $('.btn-email-subscibe').attr('disabled', 'disabled');
     var email = $('#email').val();
-    if (email != '' && IsEmail(email)) {
-    	msgParams['message'] = '请稍等...';
-        var snackbar = mdui.snackbar(msgParams);
+    if (email != '' && isEmail(email)) {
+    	msg_params['message'] = '请稍等...';
+        var snackbar = mdui.snackbar(msg_params);
         mailchimp_url = mailchimp_url.replace('?u=', '/post-json?u=').concat('&c=?');
         var data = {};
         data['EMAIL'] = email;
@@ -47,24 +47,23 @@ var attemptSubscibe = function(e) {
             url: mailchimp_url,
             type: "POST",
             data: data,
-            dataType: 'json',
+            dataType: 'jsonp',
             success: function(response, text) {
             	if (snackbar) {
             		snackbar.close();
             	}
                 if (response.result === 'success') {
-                	msgParams['message'] = success_message;
+                	msg_params['message'] = success_message;
                     $('#email').val('');
                 } else {
-                	msgParams['message'] = response.result + ": " + response.msg;
-                	msgParams['timeout'] = 4000;
+                	msg_params['message'] = response.result + ": " + response.msg;
+                	msg_params['timeout'] = 4000;
                 	$('#email').focus().select();
                 }
-                mdui.snackbar(msgParams);
+                mdui.snackbar(msg_params);
                 $('.btn-email-subscibe').removeAttr('disabled');
                 mdui.updateTextFields('#email')
             },
-            dataType: 'jsonp',
             error: function(response, text) {
                 console.log('mailchimp ajax submit error: ' + text);
                 $('.btn-email-subscibe').removeAttr('disabled');
@@ -74,15 +73,15 @@ var attemptSubscibe = function(e) {
         });
         return false;
     } else {
-    	msgParams['message'] = '请填写正确的邮箱地址';
-        mdui.snackbar(msgParams);
+    	msg_params['message'] = '请填写正确的邮箱地址';
+        mdui.snackbar(msg_params);
         $('.btn-email-subscibe').removeAttr('disabled');
         $('#email').focus().select();
         mdui.updateTextFields('#email');
     }
 };
 
-$('.btn-email-subscibe').click(attemptSubscibe);
+$('.btn-email-subscibe').click(attempt_subscibe);
 
 window.onscroll = function() {
     scrollFunction()
@@ -102,3 +101,58 @@ var backToTop = function () {
 };
 $('.btn-back-to-top').click(backToTop);
 
+//********************** 获取已加入计划的 App 列表信息 ********************//
+var url_base_api  = "https://recommend.wetolink.com/api/";
+var api_version   = "v2";
+var url_recommend = url_base_api + api_version + "/app_recommend/pull";
+
+function attemptLoadAppListInfo(url, data, callback) {
+    $.ajax({
+            url: url,
+            type: "GET",
+            data: data,
+            dataType: 'json',
+            success: function(response, text) {
+                if (text === 'success') {
+                    if (response.data) {
+                        callback.hideLoadingProgress();
+                        callback.showLoadingSuccessView(response.data);
+                    } else {
+                        callback.showLoadingErrorView();
+                    }
+                } else {
+                    console.log(response.result + ": " + response.msg);
+                    callback.showLoadingErrorView();
+                }
+            },
+            error: function(response, text) {
+                console.log('mailchimp ajax submit error: ' + text);
+                callback.showLoadingErrorView();
+            }
+        });
+        return false;
+}
+
+var hideLoadingProgress = function() {
+    $('.app-item-load-container').hide();
+}
+
+var showLoadingErrorView = function() {
+    $('.load-progress').addClass('mdui-hidden');
+    $('.load-error-text').removeClass('mdui-hidden');
+}
+
+function checkIsGreenApp(data) {
+    let green_apps = [
+        {"package_name": "kh.android.dir"},
+        {"package_name": "com.drakeet.purewriter"}
+    ];
+    data.forEach(function(item){
+        item.isGreenApp = false;
+        green_apps.forEach(function(element){
+            if (element.package_name === item.packageName) {
+                item.isGreenApp = true;
+            }
+        });
+    });
+}

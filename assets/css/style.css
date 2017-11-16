@@ -2,7 +2,7 @@
 * @Author: inferjay
 * @Date:   2017-10-25 18:13:25
 * @Last Modified by:   inferjay
-* @Last Modified time: 2017-11-15 23:47:51
+* @Last Modified time: 2017-11-16 11:32:44
 */
 
 .padding-top-130 {
@@ -52,6 +52,11 @@
 
 .app-container p {
 	font-size: 14px;
+}
+
+.app-item-load-container {
+	padding-top: 20%;
+	padding-bottom: 20%;
 }
 
 .app-item-container {
