@@ -1,15 +1,15 @@
 /*
-* @Author: inferjay
-* @Date:   2017-11-16 12:10:18
-* @Last Modified by:   inferjay
-* @Last Modified time: 2017-11-16 13:00:02
-*/
+ * @Author: inferjay
+ * @Date:   2017-11-16 12:10:18
+ * @Last Modified by:   inferjay
+ * @Last Modified time: 2017-11-16 13:00:02
+ */
 /*
-* @Author: inferjay
-* @Date:   2017-11-16 11:49:29
-* @Last Modified by:   inferjay
-* @Last Modified time: 2017-11-16 12:10:28
-*/
+ * @Author: inferjay
+ * @Date:   2017-11-16 11:49:29
+ * @Last Modified by:   inferjay
+ * @Last Modified time: 2017-11-16 12:10:28
+ */
 function showFirstPageAppsList() {
     let params = {
         "package_name": "org.androidlinks.website.appspage",
@@ -24,10 +24,17 @@ function showFirstPageAppsList() {
     attemptLoadAppListInfo(url_recommend, params, callback);
 }
 
+function clampAppDescriptionText() {
+    $('.app-item-detail-desc').toArray().forEach(element => {
+        $clamp(element, { clamp: 3 });
+    });
+}
+
 var showAppsLoadingSuccessView = function(data) {
-	checkIsGreenApp(data);
+    checkIsGreenApp(data);
     $("#app-item-templ").tmpl(data).appendTo('.app-item-container');
     $('.app-item-container').removeClass('mdui-hidden');
+    clampAppDescriptionText();
 }
 
 showFirstPageAppsList();
