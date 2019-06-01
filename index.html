@@ -1,4 +1,5 @@
 <html lang="zh_CN">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,290 +9,294 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.3.0/css/mdui.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type='text/javascript'>
-      var _vds = _vds || [];
-      window._vds = _vds;
-      (function(){
-        _vds.push(['setAccountId', '80b5a7b04e8ed7dc']);
+        var _vds = _vds || [];
+        window._vds = _vds;
         (function() {
-          var vds = document.createElement('script');
-          vds.type='text/javascript';
-          vds.async = true;
-          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.growingio.com/vds.js';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(vds, s);
+            _vds.push(['setAccountId', '80b5a7b04e8ed7dc']);
+            (function() {
+                var vds = document.createElement('script');
+                vds.type = 'text/javascript';
+                vds.async = true;
+                vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.growingio.com/vds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(vds, s);
+            })();
         })();
-      })();
-  	</script>
+    </script>
 </head>
 
 <body class="mdui-theme-primary-green mdui-theme-accent-yellow mdui-loaded mdui-theme-layout-dark">
-	<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-headroom mdui-headroom-pinned-top">
-	  <div class="mdui-toolbar mdui-color-theme">
-	  	<div class="mdui-toolbar-spacer"></div>
-	  	<div class="mdui-toolbar-spacer"></div>
-	    <a href="./" class="mdui-typo-headline">Android 应用友链</a>
-	    <div class="mdui-toolbar-spacer"></div>
-	    <a data-easing="linear" href="#home" class="mdui-btn mdui-ripple mdui-ripple-white">首页</a>
-	    <a data-easing="linear" href="#apps" class="mdui-btn mdui-ripple mdui-ripple-white">已加入的应用</a>
-	    <a data-easing="linear" href="#joined" class="mdui-btn mdui-ripple mdui-ripple-white">如何加入</a>
-	    <a data-easing="linear" href="#opensource" class="mdui-btn mdui-ripple mdui-ripple-white">开源项目</a>
-	    <a href="about.html" class="mdui-btn mdui-ripple mdui-ripple-white">关于我们</a>
-	    <div class="mdui-toolbar-spacer"></div>
-	    <div class="mdui-toolbar-spacer"></div>
-	  </div>
-	</div>
-	<div id="home" class="mdui-color-white back-to-top">
-		<div class="mdui-container home-container padding-top-130">
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-text-center">
-					<img src="assets/images/logo.png">
-					<h2>Android 应用友链计划</h2>
-					<p class="mdui-text-color-black-secondary">
-						Android 圈其实很多开发者开发了很多优秀的应用，不乏非常有价值的产品，
-						<br>国内生态又特别不好，Android 独立开发者真是非常艰难。
-						<br/>「Android 应用友链」计划，做 Android 开发者之间的应用友情链接，抱团共赢未来。
-						<br>再小的个体，也是力量，欢迎个人开发者的应用加入。
-					</p>
-					<a href="https://github.com/android-links/AndroidLinks/blob/master/README.md" class="mdui-btn mdui-btn-raised mdui-ripple btn-joined-plan" >申请加入计划</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="mdui-divider-dark"></div>
-	<div id="apps" class="mdui-color-grey-100">
-		<div class="mdui-container app-container">
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col"></div>
-				<div class="mdui-col">
-					<div class="mdui-text-center">
-						<h2>已加入计划的应用</h2>
-						<p class="mdui-text-color-black-secondary">一些个人开发者开发的 App，小而美，注重用户体验</p>
-					</div>
-				</div>
-				<div class="mdui-col"></div>
-			</div>
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1 app-item-load-container">
-				<div class="mdui-col"></div>
-		    	<div class="mdui-col">
-					<center>
-						<div class="mdui-spinner mdui-spinner-colorful load-progress"></div>
-						<div class="mdui-hidden load-error-text">💔<span class="mdui-text-color-black-secondary">&nbsp;&nbsp;加载 App 信息失败&nbsp;</span>💔</div>
-					</center>
-		    	</div>
-		    	<div class="mdui-col"></div>
-			</div>
-		    <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1 mdui-hidden app-item-container"></div>
-		    <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-		    	<div class="mdui-col"></div>
-		    	<div class="mdui-col">
-		    		<div class="mdui-text-center">
-						<a href="https://github.com/android-links/AndroidLinks/blob/master/README.md" class="mdui-btn mdui-btn-raised mdui-ripple btn-joined-plan" >申请加入计划</a>
-					</div>
-		    	</div>
-		    	<div class="mdui-col"></div>
-			</div>
-		  </div>
-	</div>
-	<div class="mdui-divider-dark"></div>
-	<div id="joined" class="mdui-color-white">
-		<div class="mdui-container joined-container">
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col"></div>
-				<div class="mdui-col">
-					<div class="mdui-text-center">
-						<h2>如何加入计划</h2>
-						<p class="mdui-text-color-black-secondary">仅需 2 步即可轻松加入</p>
-					</div>
-				</div>
-				<div class="mdui-col"></div>
-			</div>
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col"></div>
-				<div class="mdui-col">
-					<div class="mdui-text-center">
-						<h3>第 0 步</h3>
-						<p class="mdui-text-color-black-secondary joined-step-desc">App 开发者通过 SDK 或者 Api 任选其一接入 Android 应用友链</p>
-					</div>
-				</div>
-				<div class="mdui-col"></div>
-			</div>
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col joined-method-container">
-					<a class="mdui-hoverable mdui-ripple-white mdui-text-center joined-method-item sdk" target="_blank" href="https://github.com/android-links/about-page">
-						<img class="joined-method-item-icon" src="assets/images/icon-sdk.svg"/>
-						<p class="mdui-text-color-black-disabled joined-method-item-desc">省时、省力、快捷接入只需一行代码</p>
-					</a>
-				</div>
-				<div class="mdui-col"></div>
-				<div class="mdui-col joined-method-container">
-					<a class="mdui-hoverable mdui-ripple-white mdui-text-center joined-method-item api" target="_blank" href="https://www.zhaoj.in/read-4574.html">
-						<img class="joined-method-item-icon" src="assets/images/icon-api.svg"/>
-						<p class="mdui-text-color-black-disabled joined-method-item-desc">适合 App 已经有自己的框架和主题</p>
-					</a>
-				</div>
-			</div>
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col"></div>
-				<div class="mdui-col">
-					<div class="mdui-text-center">
-						<h3>第 1 步</h3>
-						<p class="mdui-text-color-black-secondary joined-step-desc">在 <a class="joined-apps-github-repo-link" target="_blank" href="https://github.com/android-links/apps">GitHub Repo</a> 提交 App 相关信息</p>
-					</div>
-				</div>
-				<div class="mdui-col"></div>
-			</div>
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col"></div>
-				<div class="mdui-col joined-read-detail-docs-container">
-					<div class="mdui-text-center">
-						<a class="mdui-btn mdui-btn-raised mdui-ripple btn-joined-read-detail-docs" target="_blank" href="https://github.com/android-links/AndroidLinks/blob/master/README.md" >阅读详细接入指南</a>
-					</div>
-				</div>
-				<div class="mdui-col"></div>
-			</div>
-		</div>
-	</div>
-	<div class="mdui-divider-dark"></div>
-	<div id="opensource" class="mdui-color-grey-100">
-		<div class="mdui-container opensource-project-container">
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col"></div>
-				<div class="mdui-col">
-					<div class="mdui-text-center">
-						<h2>开源项目</h2>
-						<p class="mdui-text-color-black-secondary">开放、分享、创新</p>
-					</div>
-				</div>
-				<div class="mdui-col"></div>
-			</div>
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col opensource-project-container">
-					<a class="mdui-shadow-1 mdui-hoverable mdui-ripple-white mdui-text-center mdui-color-white opensource-project-item androidlinks" target="_blank" href="https://github.com/android-links/about-page">
-						<img class="opensource-project-item-icon" src="assets/images/logo-android-links-app.png"/>
-						<h3 class="opensource-project-item-title">AndroidLinks</h3>
-						<p class="mdui-text-color-black-disabled opensource-project-item-desc">随时随地查看各个 App 在应用友链中被推荐的数据</p>
-					</a>
-				</div>
-				<div class="mdui-col"></div>
-				<div class="mdui-col opensource-project-container">
-					<a class="mdui-shadow-1 mdui-hoverable mdui-ripple-white mdui-text-center mdui-color-white opensource-project-item about-page" target="_blank" href="https://www.zhaoj.in/read-4574.html">
-						<img class="opensource-project-item-icon" src="assets/images/log-about-page.svg"/>
-						<h3 class="opensource-project-item-title">about-page</h3>
-						<p class="mdui-text-color-black-disabled opensource-project-item-desc">漂亮的 App 关于页面通过它只需要一行代码即可接入 Android 应用友链</p>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="mdui-divider-dark"></div>
-	<div id="follow-us" class="mdui-color-grey-800">
-		<div class="mdui-container follow-us-container">
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col">
-					<div class="mdui-text-center follow-us-text-container">
-						<span class="follow-us-title">关注 Android 应用友链计划</span>
-						<p class="mdui-text-color-white-secondary follow-us-desc">获取关于应用友链计划的最新动态</p>
-					</div>
-				</div>
-				<div class="mdui-col">
-					<div class="mdui-textfield mdui-textfield-floating-label follow-us-email">
-						<label class="mdui-textfield-label mdui-text-color-white-secondary">邮箱地址</label>
-						<input id="email" class="mdui-textfield-input mdui-text-color-white-secondary" type="email" required/>
-  						<div id="message" class="mdui-textfield-error">邮箱格式错误</div>
-					</div>
-					<div class="mdui-text-center">
-						<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block btn-email-subscibe" type="button" >邮件订阅</button>
-					</div>
-				</div>
-				<div class="mdui-col">
-					<div class="follow-us-social-container">
-						<img class="mdui-shadow-4 follow-us-wechat-official-qrcode" src="assets/images/img-wechat-official-qrcode.png" alt="公众号二维码"/>
-						<ul class="follow-us-social-item-list">
-							<li>
-								<a class="follow-us-social-item github" target="_blank" href="https://github.com/android-links/">
-									<img class="follow-us-social-item-icon" src="assets/images/icon-github.png" alt="GitHub"/>
-									<img class="follow-us-social-item-icon" src="assets/images/icon-github-hover.png" alt="GitHub"/>
-								</a>
-							</li>
-							<li>
-								<a class="follow-us-social-item twitter" target="_blank" href="https://twitter.com/androidlinksorg">
-									<img class="follow-us-social-item-icon" src="assets/images/icon-twitter.png" alt="Twitter"/>
-									<img class="follow-us-social-item-icon" src="assets/images/icon-twitter-hover.png" alt="Twitter"/>
-								</a>
-							</li>
-							<li>
-								<a class="follow-us-social-item weibo" target="_blank" href="http://weibo.com/androidlinks">
-									<img class="follow-us-social-item-icon" src="assets/images/icon-weibo.png" alt="Weibo"/>
-									<img class="follow-us-social-item-icon" src="assets/images/icon-weibo-hover.png" alt="Weibo"/>
-								</a>
-							</li>
-							<li>
-								<a class="follow-us-social-item wechat">
-									<img class="follow-us-social-item-icon" src="assets/images/icon-wechat.png" alt="Wechat">
-									<img class="follow-us-social-item-icon" src="assets/images/icon-wechat-hover.png" alt="Wechat">
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-headroom mdui-headroom-pinned-top">
+        <div class="mdui-toolbar mdui-color-theme">
+            <div class="mdui-toolbar-spacer"></div>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="./" class="mdui-typo-headline">Android 应用友链</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a data-easing="linear" href="#home" class="mdui-btn mdui-ripple mdui-ripple-white">首页</a>
+            <a data-easing="linear" href="#apps" class="mdui-btn mdui-ripple mdui-ripple-white">已加入的应用</a>
+            <a data-easing="linear" href="#joined" class="mdui-btn mdui-ripple mdui-ripple-white">如何加入</a>
+            <a data-easing="linear" href="#opensource" class="mdui-btn mdui-ripple mdui-ripple-white">开源项目</a>
+            <a href="about.html" class="mdui-btn mdui-ripple mdui-ripple-white">关于我们</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <div class="mdui-toolbar-spacer"></div>
+        </div>
+    </div>
+    <div id="home" class="mdui-color-white back-to-top">
+        <div class="mdui-container home-container padding-top-130">
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-text-center">
+                    <img src="assets/images/logo.png">
+                    <h2>Android 应用友链计划</h2>
+                    <p class="mdui-text-color-black-secondary">
+                        Android 圈其实很多开发者开发了很多优秀的应用，不乏非常有价值的产品，
+                        <br>国内生态又特别不好，Android 独立开发者真是非常艰难。
+                        <br/>「Android 应用友链」计划，做 Android 开发者之间的应用友情链接，抱团共赢未来。
+                        <br>再小的个体，也是力量，欢迎个人开发者的应用加入。
+                    </p>
+                    <a href="https://github.com/android-links/AndroidLinks/blob/master/README.md" class="mdui-btn mdui-btn-raised mdui-ripple btn-joined-plan">申请加入计划</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-divider-dark"></div>
+    <div id="apps" class="mdui-color-grey-100">
+        <div class="mdui-container app-container">
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col"></div>
+                <div class="mdui-col">
+                    <div class="mdui-text-center">
+                        <h2>已加入计划的应用</h2>
+                        <p class="mdui-text-color-black-secondary">一些个人开发者开发的 App，小而美，注重用户体验</p>
+                    </div>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1 app-item-load-container">
+                <div class="mdui-col"></div>
+                <div class="mdui-col">
+                    <center>
+                        <div class="mdui-spinner mdui-spinner-colorful load-progress"></div>
+                        <div class="mdui-hidden load-error-text">💔<span class="mdui-text-color-black-secondary">&nbsp;&nbsp;加载 App 信息失败&nbsp;</span>💔</div>
+                    </center>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1 mdui-hidden app-item-container"></div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col"></div>
+                <div class="mdui-col">
+                    <div class="mdui-text-center">
+                        <a href="https://github.com/android-links/AndroidLinks/blob/master/README.md" class="mdui-btn mdui-btn-raised mdui-ripple btn-joined-plan">申请加入计划</a>
+                    </div>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-divider-dark"></div>
+    <div id="joined" class="mdui-color-white">
+        <div class="mdui-container joined-container">
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col"></div>
+                <div class="mdui-col">
+                    <div class="mdui-text-center">
+                        <h2>如何加入计划</h2>
+                        <p class="mdui-text-color-black-secondary">仅需 2 步即可轻松加入</p>
+                    </div>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col"></div>
+                <div class="mdui-col">
+                    <div class="mdui-text-center">
+                        <h3>第 0 步</h3>
+                        <p class="mdui-text-color-black-secondary joined-step-desc">App 开发者通过 SDK 或者 Api 任选其一接入 Android 应用友链</p>
+                    </div>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col joined-method-container">
+                    <a class="mdui-hoverable mdui-ripple-white mdui-text-center joined-method-item sdk" target="_blank" href="https://github.com/android-links/about-page">
+                        <img class="joined-method-item-icon" src="assets/images/icon-sdk.svg" />
+                        <p class="mdui-text-color-black-disabled joined-method-item-desc">省时、省力、快捷接入只需一行代码</p>
+                    </a>
+                </div>
+                <div class="mdui-col"></div>
+                <div class="mdui-col joined-method-container">
+                    <a class="mdui-hoverable mdui-ripple-white mdui-text-center joined-method-item api" target="_blank" href="https://www.zhaoj.in/read-4574.html">
+                        <img class="joined-method-item-icon" src="assets/images/icon-api.svg" />
+                        <p class="mdui-text-color-black-disabled joined-method-item-desc">适合 App 已经有自己的框架和主题</p>
+                    </a>
+                </div>
+            </div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col"></div>
+                <div class="mdui-col">
+                    <div class="mdui-text-center">
+                        <h3>第 1 步</h3>
+                        <p class="mdui-text-color-black-secondary joined-step-desc">在 <a class="joined-apps-github-repo-link" target="_blank" href="https://github.com/android-links/apps">GitHub Repo</a> 提交 App 相关信息</p>
+                    </div>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col"></div>
+                <div class="mdui-col joined-read-detail-docs-container">
+                    <div class="mdui-text-center">
+                        <a class="mdui-btn mdui-btn-raised mdui-ripple btn-joined-read-detail-docs" target="_blank" href="https://github.com/android-links/AndroidLinks/blob/master/README.md">阅读详细接入指南</a>
+                    </div>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-divider-dark"></div>
+    <div id="opensource" class="mdui-color-grey-100">
+        <div class="mdui-container opensource-project-container">
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col"></div>
+                <div class="mdui-col">
+                    <div class="mdui-text-center">
+                        <h2>开源项目</h2>
+                        <p class="mdui-text-color-black-secondary">开放、分享、创新</p>
+                    </div>
+                </div>
+                <div class="mdui-col"></div>
+            </div>
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col opensource-project-container">
+                    <a class="mdui-shadow-1 mdui-hoverable mdui-ripple-white mdui-text-center mdui-color-white opensource-project-item androidlinks" target="_blank" href="https://github.com/android-links/AndroidLinks">
+                        <img class="opensource-project-item-icon" src="assets/images/logo-android-links-app.png" />
+                        <h3 class="opensource-project-item-title">AndroidLinks</h3>
+                        <p class="mdui-text-color-black-disabled opensource-project-item-desc">随时随地查看各个 App 在应用友链中被推荐的数据</p>
+                    </a>
+                </div>
+                <div class="mdui-col"></div>
+                <div class="mdui-col opensource-project-container">
+                    <a class="mdui-shadow-1 mdui-hoverable mdui-ripple-white mdui-text-center mdui-color-white opensource-project-item about-page" target="_blank" href="https://github.com/android-links/about-page">
+                        <img class="opensource-project-item-icon" src="assets/images/log-about-page.svg" />
+                        <h3 class="opensource-project-item-title">about-page</h3>
+                        <p class="mdui-text-color-black-disabled opensource-project-item-desc">漂亮的 App 关于页面通过它只需要一行代码即可接入 Android 应用友链</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-divider-dark"></div>
+    <div id="follow-us" class="mdui-color-grey-800">
+        <div class="mdui-container follow-us-container">
+            <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                <div class="mdui-col">
+                    <div class="mdui-text-center follow-us-text-container">
+                        <span class="follow-us-title">关注 Android 应用友链计划</span>
+                        <p class="mdui-text-color-white-secondary follow-us-desc">获取关于应用友链计划的最新动态</p>
+                    </div>
+                </div>
+                <div class="mdui-col">
+                    <div class="mdui-textfield mdui-textfield-floating-label follow-us-email">
+                        <label class="mdui-textfield-label mdui-text-color-white-secondary">邮箱地址</label>
+                        <input id="email" class="mdui-textfield-input mdui-text-color-white-secondary" type="email" required/>
+                        <div id="message" class="mdui-textfield-error">邮箱格式错误</div>
+                    </div>
+                    <div class="mdui-text-center">
+                        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block btn-email-subscibe" type="button">邮件订阅</button>
+                    </div>
+                </div>
+                <div class="mdui-col">
+                    <div class="follow-us-social-container">
+                        <img class="mdui-shadow-4 follow-us-wechat-official-qrcode" src="assets/images/img-wechat-official-qrcode.png" alt="公众号二维码" />
+                        <ul class="follow-us-social-item-list">
+                            <li>
+                                <a class="follow-us-social-item github" target="_blank" href="https://github.com/android-links/">
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-github.png" alt="GitHub" />
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-github-hover.png" alt="GitHub" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="follow-us-social-item twitter" target="_blank" href="https://twitter.com/androidlinksorg">
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-twitter.png" alt="Twitter" />
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-twitter-hover.png" alt="Twitter" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="follow-us-social-item weibo" target="_blank" href="http://weibo.com/androidlinks">
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-weibo.png" alt="Weibo" />
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-weibo-hover.png" alt="Weibo" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="follow-us-social-item wechat">
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-wechat.png" alt="Wechat">
+                                    <img class="follow-us-social-item-icon" src="assets/images/icon-wechat-hover.png" alt="Wechat">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
 
-	</div>
-	<button class="mdui-fab mdui-fab-fixed mdui-color-theme btn-back-to-top"><i class="mdui-icon material-icons mdui-text-color-white">&#xe5d8;</i></button>
-	<footer class="mdui-color-white">
-		<div class="mdui-container footer-container">
-			<div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
-				<div class="mdui-col">
-					<div class="mdui-text-center footer-copyright-container">
-						<p class="mdui-text-color-black-secondary footer-copyright-text">© 2017 Android 应用友链</p>
-						<p class="mdui-text-color-black-disabled footer-record-info-text">桂ICP备14004370号-9</p>
-					</div>
-				</div>
-				<div class="mdui-col">
-					<div class="mdui-text-center footer-friend-links-container">
-						<p class="mdui-text-color-black-secondary footer-friend-links-title">友情链接</p>
-						<a class="mdui-text-color-black-secondary footer-friend-links-item" target="_blank" href="https://green-android.org">Android 绿色应用公约</a>
-					</div>
-				</div>
-				<div class="mdui-col">
-					<div class="mdui-text-center footer-logo-author-container">
-						<p class="mdui-text-color-black-secondary">Logo 由 <a class="logo-author-link" target="_blank" href="https://github.com/drakeet">drakeet</a> 设计</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script id="app-item-templ" type="text/x-jquery-tmpl">
-		<div class="mdui-col">
-		    <a class="mdui-shadow-1 mdui-hoverable mdui-ripple-white mdui-text-center mdui-color-white app-item" target="_blank" href="${downloadUrl}">
-		    	<div class="app-item-icon-container">
-			    	<img class="app-item-icon" src="${iconUrl}"/>
-			    	<img class="mdui-img-circle mdui-shadow-2 mdui-color-white ${isGreenApp ? "" : "mdui-invisible"} app-item-green-android-certi-icon" src="assets/images/logo-green-android.svg">
-		    	</div>
-			    <div class="app-item-detail">
-			       	<h3 class="app-item-detail-title">${appName}</h3>
-			        <div class="mdui-text-color-black-disabled ${isGreenApp ? "" : "mdui-invisible"} app-item-green-android-cert-text">已加入绿色应用公约</div>
-			        <div class="mdui-text-color-black-secondary app-item-detail-desc">${description}</div>
-			    </div>
-		    </a>
-		</div>
-	</script>
-	<script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
-	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/js/vendor/smooth-scroll.min.js"></script>
-	<script src="assets/js/vendor/jquery.tmpl.min.js"></script>
-	<script src="assets/js/app.js"></script>
-	<script src="assets/js/home.js"></script>
+        </div>
+        <button class="mdui-fab mdui-fab-fixed mdui-color-theme btn-back-to-top"><i class="mdui-icon material-icons mdui-text-color-white">&#xe5d8;</i></button>
+        <footer class="mdui-color-white">
+            <div class="mdui-container footer-container">
+                <div class="mdui-row-md-3 mdui-row-sm-2 mdui-row-xs-1">
+                    <div class="mdui-col">
+                        <div class="mdui-text-center footer-copyright-container">
+                            <p class="mdui-text-color-black-secondary footer-copyright-text">© 2017 Android 应用友链</p>
+                            <p class="mdui-text-color-black-disabled footer-record-info-text">桂ICP备14004370号-9</p>
+                        </div>
+                    </div>
+                    <div class="mdui-col">
+                        <div class="mdui-text-center footer-friend-links-container">
+                            <p class="mdui-text-color-black-secondary footer-friend-links-title">友情链接</p>
+                            <a class="mdui-text-color-black-secondary footer-friend-links-item" target="_blank" href="https://green-android.org">Android 绿色应用公约</a>
+                        </div>
+                    </div>
+                    <div class="mdui-col">
+                        <div class="mdui-text-center footer-logo-author-container">
+                            <p class="mdui-text-color-black-secondary">Logo 由 <a class="logo-author-link" target="_blank" href="https://github.com/drakeet">drakeet</a> 设计</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script id="app-item-templ" type="text/x-jquery-tmpl">
+            <div class="mdui-col">
+                <a class="mdui-shadow-1 mdui-hoverable mdui-ripple-white mdui-text-center mdui-color-white app-item" target="_blank" href="${downloadUrl}">
+                    <div class="app-item-icon-container">
+                        <img class="app-item-icon" src="${iconUrl}" />
+                        <img class="mdui-img-circle mdui-shadow-2 mdui-color-white ${isGreenApp ? " " : "mdui-invisible "} app-item-green-android-certi-icon" src="assets/images/logo-green-android.svg">
+                    </div>
+                    <div class="app-item-detail">
+                        <h3 class="app-item-detail-title">${appName}</h3>
+                        <div class="mdui-text-color-black-disabled ${isGreenApp ? " " : "mdui-invisible "} app-item-green-android-cert-text">已加入绿色应用公约</div>
+                        <div class="mdui-text-color-black-secondary app-item-detail-desc">${description}</div>
+                    </div>
+                </a>
+            </div>
+        </script>
+        <script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/js/vendor/smooth-scroll.min.js"></script>
+        <script src="assets/js/vendor/jquery.tmpl.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/home.js"></script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108824623-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108824623-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-	  gtag('config', 'UA-108824623-1');
-	</script>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-108824623-1');
+        </script>
 </body>
+
 </html>
