@@ -9,6 +9,13 @@
 	padding-top: 130px !important;
 }
 
+.nav-logo {
+	width: 42px;
+	border-radius:50%;
+	margin: 0 4px;
+	box-shadow: 0 1px 2px 0 rgba(255,255,255,.3), 0 1px 3px 1px rgba(255,255,255,.15);
+}
+
 .home-container {
 	padding: 20px;
 	height: 640px;
